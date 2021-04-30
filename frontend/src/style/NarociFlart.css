@@ -1,0 +1,130 @@
+.NarociFlartTopMargin{
+    /* border: 1px solid red; */
+    margin-top: 80px;
+
+}
+
+
+.NarociFlartOuterDiv{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.NarociFlartOuterDiv >div, .NarociFlartDropImg{
+    /* border: 1px solid red; */
+    margin: 30px;
+}
+
+.NarociFlartH1{
+    /* border: 1px solid black; */
+    text-align: center;
+    margin: 10px;
+    letter-spacing: 10px;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.NarociFlartDropImg{
+    border: 1px solid rgba(128, 128, 128,0.6);
+    max-width: 100%;
+    background-image: url('../images/ozadje3.jpg');
+    background-size: 100% 100%;
+    opacity: 0.7;
+    width:500px;
+    height:500px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.NarociFlartInfo{
+    /* border: 1px solid red; */
+    background-color: white;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 0;
+}
+#icon-button-file{
+    /* border: 1px solid black; */
+    position:absolute;
+    top: 950px;
+}
+
+.PhotoCamera{
+    /* border: 1px solid black; */
+    padding: 150px;
+}
+
+.NarociFlartInfo >input{
+    margin-bottom:10px;
+    width: 80%;
+    height: 30px;
+}
+
+.NarociFlartInfo >label{
+    font-weight: 700;
+}
+
+.NarociFlartNarociBtn{
+    padding:  5px 30px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.NarociFlartNarociBtn:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid grey;
+}
+
+.NarociFlartInfo > input{
+    display: inline-block;
+} 
+
+@media(max-width:550px){
+    .PhotoCamera{
+        padding: 130px;
+    }
+    .NarociFlartOuterDiv{
+        flex-direction: column;
+    }
+    .NarociFlartOuterDiv >div{
+        width:300px;
+        margin: 20px auto;
+    }
+    .NarociFlartDropImg{
+        height: 300px;
+    }
+    #icon-button-file{
+        position: absolute;
+        top: 800px;
+        width: 80%;
+    }
+    .PhotoCamera{
+        /* border: 1px solid black; */
+        padding: 100px;
+    }
+}
+
+@media(max-width:400px){
+    .NarociFlartDropImg{
+        height: 250px;
+    }
+    .NarociFlartOuterDiv >div{
+        width:250px;
+        margin: 20px auto;
+    }
+    .PhotoCamera{
+        /* border: 1px solid black; */
+        padding: 50px;
+    }
+
+}

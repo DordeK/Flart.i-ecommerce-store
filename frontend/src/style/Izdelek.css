@@ -1,0 +1,221 @@
+.IzdelekOutterDiv{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 70%;
+    /* zaradi tega je slika .IzdelekSwiperSlide vidi se malo 2. slike, na telefonski velikosti */
+    margin: 110px auto auto auto;
+    /* padding-top: 100px; */
+    height: 100vh;
+}
+.IzdelekSwiperSlide{
+    /* width: 620px; */
+    /* border: 1px solid green; */
+}
+
+
+.IzdelekSwiperSlideThumbs{
+    /* border: 1px solid black; */
+    border: 1px solid rgba(128, 128, 128,0.6);
+    width: 90%;
+    margin: 0px 0px;
+    height: 100px;
+    /* object-fit: cover; */
+}
+
+
+.IzdelekImgDiv{
+    /* border: 1px solid green;  */
+    height: 100%;
+    width: 70%;
+    text-align: center;
+}
+
+.IzdelekImg{
+    /* border: 1px solid green; */
+    border: 1px solid rgba(128, 128, 128,0.6);
+    width: 620px;
+    height: auto;
+    text-align: right;
+    /* display: flex;
+    justify-content: left; */
+}
+
+
+.IzdelekDescriptionDiv{
+    /* border: 1px solid rgba(128, 128, 128,0.5); */
+    text-align: center;
+    /* position: absolute; */
+    /* top: 0; */
+    width: 40%; 
+    margin: 0px auto auto auto; 
+    height: 50vh;
+}
+
+
+.IzdelekBesedilo > div{
+    /* border: 1px solid black;  */
+    margin: 20px 10px 50px 10px;
+    font-size: 12px;
+    line-height: 10px;
+}
+.IzdelekBesedilo > h3{
+    /* border: 1px solid black;  */
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 10px;
+    line-height: 10px;
+}
+
+
+.IzdelekBesedilo > h1 {
+    margin-bottom: 20px;
+}
+.IzdelekBesedilo > div {
+    /* border: 1px solid salmon; */
+    text-align: justify;
+    word-spacing: 5px;
+    line-height: 1.8;
+}
+
+
+
+.IzdelekKupiBtn{
+    margin: 40px auto; 
+    color: white;
+    background-color: rgba(0, 0, 0,0.8);
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+@media(max-width: 900px){
+
+.IzdelekOutterDiv{
+    /* border: 1px solid black; */
+    width: 90%;
+    height: 110vh;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.IzdelekSwiperSlide{
+    /* border: 1px solid black; */
+    width: 100%;
+}
+
+.IzdelekImgDiv{
+    /* border: 1px solid black; */
+    margin: auto;
+    width:90%
+}
+
+.IzdelekDescriptionDiv{
+    /* border: 1px solid black; */
+    width: 100%;
+    }
+}
+
+@media(max-width: 1300px){
+    .IzdelekImg{
+        width: 500px;
+    }
+}
+@media(max-width: 1000px){
+    .IzdelekImg{
+        width: 400px;
+    }
+}
+
+@media(max-width: 600px){
+    .IzdelekOutterDiv{
+        width: 100%;
+    }
+    
+}
+
+@media(max-width: 450px){
+    .IzdelekImg{
+        width: 280px;
+    }
+}
+
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 10;
+  }
+
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    z-index: 10;
+
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    z-index: 10;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    z-index: 10;
+  }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  #MainImg:hover {opacity: 0.7;}
+
+
+  @keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+  }
+  
+
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 90%;
+    }
+  }

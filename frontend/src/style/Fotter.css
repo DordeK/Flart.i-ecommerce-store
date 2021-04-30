@@ -1,0 +1,51 @@
+.FotterOuterDiv{
+    /* border: 1px solid black; */
+    z-index: 15;
+    background-color: rgba(128, 128, 128,0.7);
+    width: 100%;
+    height: auto;  
+}
+.Fotter1DivInner{
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    height: 60%;
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.FotterIkoneSpovezavam{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.Fotter2DivInner> ul{
+    /* border: 1px solid black; */
+    text-decoration: none;
+    list-style: none;
+}
+.Fotter2DivInner > h4{
+    margin-bottom: 15px;
+    margin-top: 10px;
+} 
+.Fotter2DivInner > ul> li{
+    margin: 4px 0;
+}
+@media(max-width:600px){
+    .Fotter1DivInner{
+        /* border: 1px solid black; */
+        flex-direction: column;
+
+        width: 50%;
+        margin: auto;
+        align-items: flex-start;
+    }
+    .Fotter1DivInner > div{
+        margin: 20px 0;
+    }
+
+}

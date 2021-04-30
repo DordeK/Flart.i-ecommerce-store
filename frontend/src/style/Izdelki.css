@@ -1,0 +1,113 @@
+.IzdelkiOuterDiv{
+    /* border: 1px solid rgba(46, 49, 49, 0.5); */
+    display:flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    justify-content:center;
+}
+
+.IzdelkiCard{
+    /* border: 1px solid black; */
+    /* s 22% imamo lahko 4 izdelke na strani */
+    width: 300px;
+    height: auto;
+    margin: 10px;
+}
+
+.IzdelkiDivSizinsImg{
+    /* border: 1px solid black; */
+    /* box-shadow: 0 2px 6px  hsla(0, 0%, 0%, 0.2); */
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+}
+
+.IzdelkiCardMedia{
+    /* border: 1px solid rgba(46, 49, 49, 1.0); */
+
+    /* height nam ni treba rihtati ce bojo use slike taprave velikosti */
+    /* max-width: 100%;
+    height: auto; */
+    
+    /* samo test kaksne velikosti slik rabimo */
+    /* image-rendering:pixelated; */
+    height: 400px;
+    width: 300px;
+    transition: 0.7s;
+}
+
+.IzdelkiBtnVIzdelku{
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255,0.7);
+    color: black;
+    position: absolute;
+    top:45%;
+    left: 50%;
+    width: 180px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    visibility: hidden;
+}
+
+.IzdelkiCardTag{
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+.IzdelkiDivSizinsImg:hover:before {
+    opacity: 1;
+}
+
+.IzdelkiDivSizinsImg:hover .IzdelkiBtnVIzdelku {
+    visibility:visible;
+}
+
+.IzdelkiDivSizinsImg:hover .IzdelkiCardMedia {
+    /* pocasen transition */
+    /* transition: 7s; */
+
+    overflow: hidden;
+    transform: scale(1.5);
+    opacity: 0.8;
+}
+
+
+
+
+@media(max-width: 1500px){
+
+    .IzdelkiCard{
+        max-width: 25%;
+    }
+    
+    .IzdelkiOuterDiv{
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+    
+}
+
+@media(max-width: 1300px){
+    .IzdelkiCardMedia{
+        height: auto;
+    }
+
+    .IzdelkiCard{
+        max-width: 60%;
+    }  
+    .IzdelkiOuterDiv{
+        justify-content: center;
+    }
+}
+
+
+@media(max-width: 600px){
+    .IzdelkiCard{
+        max-width: 90%;
+    }  
+}

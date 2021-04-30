@@ -1,0 +1,46 @@
+.Onas1Img{
+    /* border:  1px solid black; */
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px;
+}
+
+.OnasBesedilo{
+    /* border:  1px solid black; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+.holder {   
+    /* border:  1px solid black; */
+    width: 45%;
+    display: inline-block;    
+    align-self: center;
+}
+.OnasOuterDiv{
+    /* border:  1px solid black; */
+    padding: 0;
+    height: auto;
+}
+@media(max-width: 815px){
+    .OnasOuterDiv{
+        flex-direction: column;
+    }
+    .holder{
+        margin-top: 10px;
+        width: 90%;
+    }
+
+    .OnasReverse{
+        flex-direction: column-reverse;
+    }
+
+    .OnasBesedilo{
+        margin: 30px auto 100px auto;
+        width: 90%;
+    }
+
+}
