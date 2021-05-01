@@ -9,7 +9,7 @@
     * commerce.js,
     * axios
 
-### commerce.js libary takes care of database and backend functionality and stripe takes care of payment, comunicating between commerce.js and React web-app is possible true api calls with axios
+### commerce.js libary takes care of database and backend functionality and stripe takes care of payment, comunicating between commerce.js and React web-app is possible through api calls with axios
 
 
 * ## with React i used
