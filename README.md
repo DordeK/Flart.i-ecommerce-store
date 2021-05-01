@@ -12,13 +12,13 @@
 ### commerce.js libary takes care of database and backend functionality and stripe takes care of payment, comunicating between commerce.js and React web-app is possible through api calls with axios
 
 
-* ## with React i used
-      * funtional components
-      * Routes,
-      * useEffect hook,
-      * useState hook,
-      * useMediaQuery hook,
-      * useParams hook,
-      * Material UI,
-      * AOS for swiping,
-      * dotenv
+* ## With React i used
+  * funtional components
+  * Routes,
+  * useEffect hook,
+  * useState hook,
+  * useMediaQuery hook,  
+  * useParams hook,
+  * Material UI,
+  * AOS for swiping,
+  * dotenv
