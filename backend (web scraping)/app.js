@@ -9,17 +9,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-
-app.get('/', function(req, res, next) {
-  res.send('slash route')
-});
-
 app.use("/scrape", scraper);
 
 
 
 // catch 404 and forward to error handler
-// route for evry route that is not defined
+// route for undefined routes
 app.use(function(req, res, next) {
   res.send('error')
 });

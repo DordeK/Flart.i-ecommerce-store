@@ -13,9 +13,12 @@ require('dotenv').config()
 
 const commerce = new Commerce(process.env.REACT_APP_COMMERCE_KEY);
 
+
 let counter=0
 
+
 export default function Izdelki(props) {
+
     const [products, setProducts] = useState([])
 
     window.scroll({
@@ -24,16 +27,16 @@ export default function Izdelki(props) {
         behavior: 'smooth',
       });
 
-    console.log(counter,'<----counter');
+    // console.log(counter,'<----counter');
     counter++;
     
-    // funkcija za fetchanje podatkov o produktu na commerce.js 
+
+    // funkcija za fetchanjeproduktov na commerce.js 
     const fetchProducts = async () =>{
-        
-        const filtrirano = await commerce.products.list().then((product) => {
+            const filtrirano = await commerce.products.list().then((product) => {
             return product.data.filter( item => item.categories[0].name === props.kategorija )
-        });
-        console.log(filtrirano,"<-----filtrirano");                       
+              });
+        // console.log(filtrirano,"<-----filtrirano");                       
         setProducts(filtrirano)   
     }
     
@@ -41,21 +44,22 @@ export default function Izdelki(props) {
     
     
     useEffect(()=>{
-        console.log('it is in use Effect');
+        // console.log('it is in use Effect');
         fetchProducts()
     },[])
 
-    console.log(products.length,'<------priducts.length');
+    // console.log(products.length,'<------priducts.length');
     
     if(products.length === 0){
-        console.log('it goes in CircularProgress');
+        // console.log('it goes in CircularProgress');
         return( 
             <div className='Ozadje'>
             <CircularProgress className='VrteciStvor'/>
         </div>
        )
     }else{
-        //  ustavri jsx za vasak produkt (mapamo skozi use produkte usakemu dodelimo dolecemo strukturo) 
+
+        //  ustavri UI za vasak produkt (mapamo skozi use produkte usakemu dodelimo dolecemo strukturo) 
         const productsCard = products.map((item)=>{ 
             return(
             <div className='IzdelkiCardTag IzdelkiCard'  key={item.id}  >

@@ -30,6 +30,7 @@ const removeItem  = async (itemId)  =>  {
 }
 
   const addItemToCart = async(itemId)=>{
+    console.log(itemId);
     await commerce.cart.add(itemId);
     setToCartItem([ itemId])
   }
@@ -52,7 +53,9 @@ const removeItem  = async (itemId)  =>  {
                <Navbar cartData={cart} />
                <Route path="/" exact component={Home}></Route>
               
-               <Route path="/narociFlart" exact component={NarociFlart}></Route>
+               <Route path="/narociFlart" exact>
+                 <NarociFlart handleAddItemToCart={addItemToCart}/>
+               </Route>
 
                <Route path='/cart' exact>  
                  <Cart cartData={cart} HandleRemoveCart={removeItem}/>

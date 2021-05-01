@@ -5,26 +5,30 @@ import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import $ from "jquery";
 
 
-export default function NarociFlart() {
+export default function NarociFlart(props) {
 
+
+    const dodajVkosaric = async () =>{
+        console.log('dodano');
+        await props.handleAddItemToCart("prod_aZWNoydYLw80JA")
+    }
 
     function previewImage( image ) {
         let fileImage = image.files[0];
-        console.log(fileImage);
+        // console.log(fileImage);
         let reader = new FileReader();
-        console.log(image);
+        // console.log(image);
     
         reader.addEventListener( "load", function() {
             // convert image file to base64 string
             // let base64 = reader.result.split(",")[1]  <-- tukaj izrezemo samo base64 vrednost iz stringa vendar potem nedela search
             let base64 = reader.result.split(",")[1]
-            // console.log(base64);
+            console.log(base64);
         }, false );
-    
-
-        if ( fileImage ) {reader.readAsDataURL( fileImage );}
-    
+        if ( fileImage ) {reader.readAsDataURL( fileImage )}
     }
+
+
     $( document ).ready(function (){
         document.getElementById("icon-button-file").addEventListener( "change", function() {
             previewImage(this);
@@ -36,7 +40,7 @@ export default function NarociFlart() {
     return (
     <div className='Ozadje' style={{padding:'30px 0'}} >
         <div className='NarociFlartTopMargin'>
-        <h1 className='NarociFlartH1'>Naroči flart</h1>
+        <h1 className='NarociFlartH1'>Naroči custom flart</h1>
         <div className='NarociFlartOuterDiv' encType='multipart/form-data'>
             
             <div className='NarociFlartDropImg' data-aos="fade-right">
@@ -50,9 +54,9 @@ export default function NarociFlart() {
 
             </div>
 
-            <div className='NarociFlartInfo'data-aos="fade-right" >
+            <div className='NarociFlartInfo'data-aos="fade-right" style={{padding:'10px','borderRadius':'10px','height':'20vh'}} >
                 
-                    <label >Ime in Priimek:</label><br/>
+                    {/* <label >Ime in Priimek:</label><br/>
                     <input type="text" id="imePriimek" style={{'border':'none'}} name="imePriimek" placeholder='  ime in priimek:' required/><br/> 
 
                     <label >E-mail:</label><br/>
@@ -72,8 +76,8 @@ export default function NarociFlart() {
 
                     <label >Telefonska številka:</label><br/>
                     <input type="tel" id="telNum" style={{'border':'none'}} name="telNum" placeholder='  XXX-XXX-XXX:' pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{3}" required/><br/>
-
-                    <input type="submit" className='NarociFlartNarociBtn'   style={{'height':'50px', 'width': '50%'}} value="Dodaj v košarico"/> 
+                        */}
+                    <input type="submit" className='NarociFlartNarociBtn' onClick={dodajVkosaric}  style={{'height':'100%', 'width': '100%','fontSize':'50px','fontWeight':'100'}}  value="Dodaj v košarico"/>  
                     
             </div>  
 

@@ -23,18 +23,18 @@ AOS.init({
 export default function Home() {
     const isMobile = useMediaQuery("(max-width:1200px)");
     const isMobileTo1 = useMediaQuery("(max-width:700px)");
-    const [igPics, setIgPics]=useState([]);
-
-    
-    async function igPicsFetch() {
-        await axios.get('http://localhost:9001/scrape')
-        .then((response) =>  {
-                    setIgPics(response.data.slice(0, 4))
-                })
-                .catch((err)=>
-                    console.log("could not fetch ig Data ---> ", err)
-                    )
-                }
+    // const [igPics, setIgPics]=useState([]);
+    // 
+    const igPics =['https://i.ibb.co/XLf8bJq/4-10.jpg','https://i.ibb.co/BT8DyCh/2-04.jpg', 'https://i.ibb.co/6nLPvsC/01-03.jpg', 'https://i.ibb.co/7Rh1gj8/01-01.jpg', 'https://i.ibb.co/ZfbqSXG/01-02.jpg']
+    // async function igPicsFetch() {
+    //     await axios.get('http://localhost:9001/scrape')
+    //     .then((response) =>  {
+    //                 setIgPics(response.data.slice(0, 4))
+    //             })
+    //             .catch((err)=>
+    //                 console.log("could not fetch ig Data ---> ", err)
+    //                 )
+    //             }
 
                 
    let HomeProductPictures = [
@@ -88,27 +88,28 @@ let MobileShopLink = (
     (  
         <div className='HomeSmallImgsFlex' > 
                                 <Link className='HomeLinkForShop HomeVrece' data-aos="fade-up" to='/Izdelki/vrece'>
-                                    <h1 className='HomeNaslovIzdelkov'  >Vrece</h1>
+                                    <h1 className='HomeNaslovIzdelkov' style={{bottom:'-100%'}}  >Vrece</h1>
                                 </Link>    
                                 
 
                                 <Link  className='HomeLinkForShop HomePrinti' data-aos="fade-up" to='/Izdelki/printi'>
-                                    <h1  className='HomeNaslovIzdelkov' >Printi</h1>
+                                    <h1  className='HomeNaslovIzdelkov' style={{bottom:'-100%'}} >Printi</h1>
                                 </Link>    
                                 
 
                                 <Link className='HomeLinkForShop HomeMajice' data-aos="fade-up" to='/Izdelki/majice'>
-                                    <h1 className='HomeNaslovIzdelkov' >Majice</h1>
+                                    <h1 className='HomeNaslovIzdelkov' style={{bottom:'-100%'}} >Majice</h1>
                                 </Link>    
                             </div>
                         )
 
         let counterIgImages=0
         let igImages = igPics.map( (url) =>{
+                                            console.log(url);
                                             counterIgImages++
                                             return(
                                             <a className='HomeIgPicsAtag' key={counterIgImages} data-aos="fade-right" target="_blank" href="https://www.instagram.com/flart.i/?hl=en" >   
-                                                <img className='HomeIgPicsAtagImg' style={{width:'100%', 'height':'100%'}} src={url} alt="slika iz instagrama" />
+                                                <img className='HomeIgPicsAtagImg' style={{width:'100%',height:'100%'}} src={url} alt="slika iz instagrama" />
                                                 <IconButton className='igic'>
                                                     <InstagramIcon   style={{ fontSize:'25px','color':'black'}}/>
                                                 </IconButton>
@@ -147,9 +148,9 @@ let MobileShopLink = (
         })
 
 
-        useEffect(()=>{
-            igPicsFetch()
-        },[])
+        // useEffect(()=>{
+        //     igPicsFetch()
+        // },[])
     
     
     function scrolldown() {
@@ -158,19 +159,15 @@ let MobileShopLink = (
         }else{
         document.querySelector('#Home2DivIdNotPhone').scrollIntoView();
         }
-    }
+     }
 
     
     return ( 
         <div className='HomeOuterMainDiv Ozadje' style={{'paddingBottom':'100px', 'paddingTop':'65px'}}>
         <div className='HomeDiv' onClick={()=>scrolldown()}>
-            {/* <h1 style={{'position':'absolute', 'top': '30%','fontSize':'100px','letterSpacing':'10px'}}>flart.i</h1> */}
-            {/* <IconButton  >
-                <ExpandMoreIcon   style={{'marginBottom': '0px','padding':'80px 80px 20px 80px', fontSize:'80px','color':'black'}}/>
-            </IconButton> */}
+
             <div className="arrow bounce">
                 <div className="material-icons-outlined" style={{'marginBottom': '0px','color':'black','fontWeight':'100','fontSize':'100px','cursor':'default'}}>expand_more</div>
-                {/* <div className="fa fa-chevron-down fa-4x" onClick={()=>scrolldown()} style={{'marginBottom': '0px','color':'black','fontWeight':'200'}} href="#"></div> */}
             </div>            
         </div>
         <hr id='Home2DivId' style={{margin:'50px 0'}}/>
