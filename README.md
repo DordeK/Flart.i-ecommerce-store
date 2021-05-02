@@ -1,15 +1,19 @@
 # Flart.i-ecommerce-store
 
-# Flart.i is a headless ecommerce-store web aplication created with React.js
+### Flart.i is a headless ecommerce-store web-aplication created with React.js
+#### -> it  has Responsive Web design
 
-### website link (https://awesome-haibt-be5639.netlify.app/) live
+<br/><br/>
+
+### website live link (https://awesome-haibt-be5639.netlify.app/)
+  
   
 * ## Main technologies
     * React,
     * commerce.js,
     * axios
 
-### commerce.js libary takes care of database and backend functionality and stripe takes care of payment, comunicating between commerce.js and React web-app is possible through api calls with axios
+#### commerce.js libary takes care of database and backend functionality and stripe takes care of payment, comunicating between commerce.js and React web-app is possible through api calls with axios
 
 
 * ## With React i used
